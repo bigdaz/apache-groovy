@@ -50,5 +50,5 @@ jobs:
           DEVELOCITY_STORE_CONFIGURATION_CACHE: 'true'
 
       - name: Check licenses with rat
-        run: ./gradlew rat --no-configuration-cache
+        run: ./gradlew rat --configuration-cache
         timeout-minutes: 60
