@@ -46,6 +46,8 @@ jobs:
           develocity-url: 'https://ge.solutions-team.gradle.com'
           develocity-access-key: ${{ secrets.DEVELOCITY_ACCESS_KEY }}
           cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
+        env:
+          DEVELOCITY_STORE_CONFIGURATION_CACHE: 'true'
 
       - name: Check licenses with rat
         run: ./gradlew rat --no-configuration-cache
